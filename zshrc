@@ -41,8 +41,17 @@ echo "mount: [Backups, Music, Movies, Documents]"
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 
-export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=~/Code
-#source /usr/local/bin/virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+#export WORKON_HOME=~/.virtualenvs
+#export PROJECT_HOME=~/Code
+
+export WORKON_HOME=$HOME/Code/.virtualenvs
+export PROJECT_HOME=$HOME/Code
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/Code/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=vim
